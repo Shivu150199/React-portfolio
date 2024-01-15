@@ -1,8 +1,8 @@
 
 import { createClient } from "contentful"
 import { useEffect, useState } from "react"
-
-
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { TbSourceCode } from 'react-icons/tb'
 const Project = () => {
   const[loading,setLoading]=useState(false);
   const [projects,setProjects]=useState([])
@@ -16,10 +16,11 @@ const Project = () => {
 
       const response=await client.getEntries({content_type:'projects'})
       const projects=response.items.map((item)=>{
-const {title,url,image}=item.fields;
+        
+const {title,url,image,sourcecode}=item.fields;
 const id=item.sys.id;
 const img=image?.fields?.file?.url;
-return {title,id,img,url}
+return {title,id,img,url,sourcecode}
       })
       setProjects(projects)
       setLoading(false)
@@ -59,7 +60,7 @@ console.log(projects)
 
       <div className="grid items-center justify-center gap-6 lg:grid-cols-2 xl:grid-cols-3 ">
         {projects.map((project) => {
-          const { id, img, url, title } = project
+          const { id, img, url, title,sourcecode } = project
           return (
             <div
               className="card w-96 bg-zinc-900 drop-shadow-2xl transition-transform hover:translate-y-4 "
@@ -73,12 +74,14 @@ console.log(projects)
                   {title}
                   <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p>Html css Javascript</p>
+                
                 <div className="card-actions justify-end">
-                  <a href={url} className="badge badge-outline">
-                    see live
+                  <a href={url} className="btn btn-secondary">
+                    <FaExternalLinkAlt />
                   </a>
-                  <div className="badge badge-outline">Source code</div>
+                  <a href={sourcecode} className="btn btn-secondary">
+                    <TbSourceCode />
+                  </a>
                 </div>
               </div>
             </div>

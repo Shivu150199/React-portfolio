@@ -1,28 +1,9 @@
 import React from 'react'
 
 import { pages, socialLinks } from '../data/project'
-import { FaGithubAlt, FaLinkedin } from 'react-icons/fa'
 
-import { SiFrontendmentor, SiGmail } from 'react-icons/si'
 
-// const pages=[
-//   {
-//     id:'#project',
-//     title:'Work',
 
-//   },
-//   {
-//     id:'#contact',
-//     title:'Say Hello !',
-
-//   },
-//   {
-//     id:'#about',
-//     title:'about',
-
-//   },
- 
-// ]
 
 
 const Navbar = () => {
@@ -33,7 +14,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between w-full">
 
-        <ul className="flex gap-6 text-pretty text-gray-300 text-base font-semibold " >
+        <ul className="flex gap-4 text-pretty text-gray-300 text-base font-semibold lg:gap-6 " >
         {
           pages.map((item)=>{
           return <li className="hover:text-fuchsia-800 capitalize " key={item.id}>
@@ -43,7 +24,7 @@ const Navbar = () => {
         }
   </ul>
       
-        <ul className="flex gap-8 text-xl text-gray-200 ">
+        <ul className="flex gap-4 text-xl text-gray-200 lg:gap-8 ">
           {
             socialLinks.map((item)=>{
               return (
