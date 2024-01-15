@@ -70,7 +70,7 @@ console.log(projects)
                 <img className="grayscale" src={img} alt="Shoes" />
               </figure>
               <div className="card-body text-white">
-                <h2 className="card-title">
+                <h2 className="card-title capitalize">
                   {title}
                   <div className="badge badge-secondary">NEW</div>
                 </h2>
