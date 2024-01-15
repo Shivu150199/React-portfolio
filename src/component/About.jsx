@@ -11,9 +11,9 @@ const About = () => {
       </h2>
 
       <img
-        src="src/assets/aboutme.svg"
-        alt=""
-        className="md:w-80 h-80 lg:w-full h-full"
+        src="src/img/aboutme.svg"
+        alt="about me"
+        className="md:w-80 lg:w-full "
       />
 
       <div className="flex flex-col items-center justify-center">
