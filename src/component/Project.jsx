@@ -67,7 +67,11 @@ console.log(projects)
               key={id}
             >
               <figure>
-                <img className="grayscale" src={img} alt="Shoes" />
+                <img className="grayscale" src={img} alt="Shoes" style={{
+                  width:'100%',
+                  height:'12rem',
+                  objectFit:'cover'
+                }} />
               </figure>
               <div className="card-body text-white">
                 <h2 className="card-title capitalize">
