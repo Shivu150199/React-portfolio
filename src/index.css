@@ -9,3 +9,8 @@ html {
 body{
     background:black;
 }
+
+.hero{
+  background-image:url(https://w0.peakpx.com/wallpaper/570/33/HD-wallpaper-man-made-street-lamp-dark.jpg);
+height: 100vh;
+}

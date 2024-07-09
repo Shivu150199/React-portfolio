@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { pages, socialLinks } from '../data/project'
+import Theme from './Theme'
 
 
 
@@ -25,6 +26,7 @@ const Navbar = () => {
   </ul>
       
         <ul className="flex gap-4 text-xl text-gray-200 lg:gap-8 ">
+          <Theme/>
           {
             socialLinks.map((item)=>{
               return (

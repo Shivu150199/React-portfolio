@@ -1,5 +1,5 @@
 import React from 'react'
-
+import undraw from '../assets/un.svg'
 const About = () => {
   return (
     <section
@@ -13,11 +13,11 @@ const About = () => {
         <div className='flex content-center items-center justify-center'>
 
         <img
-          src="https://marketplace.canva.com/EAE-ebpkpl8/1/0/1236w/canva-simple-black-and-white-student-introduction-all-about-me-worksheet-h8Rua84Vki8.jpg"
+          src={undraw}
           alt="about me"
           className="md:w-80 lg:w-full rounded-badge"
           style={{
-            width: '20rem',
+            width: '30rem',
           }}
           />
           </div>

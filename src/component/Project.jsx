@@ -58,12 +58,12 @@ console.log(projects)
         </h2>
       </div>
 
-      <div className="grid items-center justify-center gap-6 lg:grid-cols-2 xl:grid-cols-3 ">
+      <div className="grid items-center justify-center gap-6 md:grid-cols-2 lg:grid-cols-3 ">
         {projects.map((project) => {
           const { id, img, url, title,sourcecode } = project
           return (
             <div
-              className="card w-96 bg-zinc-900 drop-shadow-2xl transition-transform hover:translate-y-4 "
+              className="card bg-zinc-900 drop-shadow-2xl transition-transform hover:translate-y-4 "
               key={id}
             >
               <figure>
